@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/azevedo/.local/share/nvim/site/pack/packer/start/monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
-  ["nvim-deus"] = {
-    loaded = true,
-    path = "/home/azevedo/.local/share/nvim/site/pack/packer/start/nvim-deus",
-    url = "https://github.com/theniceboy/nvim-deus"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/azevedo/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -113,6 +108,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/azevedo/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  supertab = {
+    loaded = true,
+    path = "/home/azevedo/.local/share/nvim/site/pack/packer/start/supertab",
+    url = "https://github.com/ervandew/supertab"
+  },
+  vim = {
+    loaded = true,
+    path = "/home/azevedo/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
   }
 }
 

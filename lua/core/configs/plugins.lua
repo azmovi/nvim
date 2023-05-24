@@ -45,9 +45,8 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
     use("jiangmiao/auto-pairs")
     use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
-    use("theniceboy/nvim-deus")
     use("ervandew/supertab")
-
+    use("yazeed1s/minimal.nvim")
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
