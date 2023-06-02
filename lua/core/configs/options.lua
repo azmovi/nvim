@@ -23,6 +23,7 @@ set.termguicolors = true
 set.title = true
 
 --Positioning
+set.number = true
 set.relativenumber = true
 set.cursorline = true
 set.hidden = true
