@@ -29,3 +29,6 @@ set.cursorline = true
 set.hidden = true
 set.mouse = "a"
 set.colorcolumn = "80"
+
+--Dictionary
+set.spelllang = "br"
