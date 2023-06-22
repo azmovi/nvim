@@ -1,4 +1,4 @@
-    local fn = vim.fn
+local fn = vim.fn
 
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -48,6 +48,7 @@ return packer.startup(function(use)
     use("ervandew/supertab")
     use("yazeed1s/minimal.nvim")
     use("iamcco/markdown-preview.nvim")
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
