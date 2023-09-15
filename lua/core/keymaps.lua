@@ -9,6 +9,8 @@ map('n', '<leader>w', 'z=')
 map('n', '<leader>q', ':bd<CR>')
 map('i', '<leader>w', '<ESC> z=')
 map('i', 'jk', '<ESC>')
+
+map('n', '<leader>t', ':w | !g++ % && ./a.out < *.txt <CR>')
 -- Movimentação de janelas
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-l>', '<C-w>l')
