@@ -2,6 +2,7 @@
 return {
 	"typicode/bg.nvim",
 	"tomasr/molokai",
+        "yazeed1s/minimal.nvim",
 	
 	{
 		"catppuccin/nvim",
