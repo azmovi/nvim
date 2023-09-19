@@ -21,6 +21,7 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<tab>', ':BufferLineCycleNext<CR>')
 map('n', '<leader><tab>', ':BufferLineCyclePrev<CR>')
 
+map('n', '<leader>y', 'ggvG"+y')
 map("n", "<leader>ur", "<cmd>nohl<cr>", "Clear highlights")
 
 -- Stay in indent mode
