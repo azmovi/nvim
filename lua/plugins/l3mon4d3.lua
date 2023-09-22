@@ -10,8 +10,7 @@ return {
 
         -- Mapeamento para expansão de snippets
         local map = require("helpers.keys").map
-        map("i", ",s", "<cmd>lua require'luasnip'.expand_or_jump()<CR>")
-        map('i', '<S-Tab>', '<cmd>lua require\'luasnip\'.jump(-1)<CR>')
+        map("i", "<leader><space>", "<cmd>lua require'luasnip'.expand_or_jump()<CR>")
 
         --map("i", "<S-Tab>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
     end

@@ -17,16 +17,14 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-j>', '<C-w>j')
 
--- Movimentação de buffers
-map('n', '<tab>', ':BufferLineCycleNext<CR>')
-map('n', '<leader><tab>', ':BufferLineCyclePrev<CR>')
-
 map('n', '<leader>y', 'ggvG"+y')
-map("n", "<leader>ur", "<cmd>nohl<cr>", "Clear highlights")
+map("n", "<leader>x", "<cmd>nohl<cr>", "Clear highlights")
 
 -- Stay in indent mode
 map("v", "<", "<gv")
 map("v", ">", ">gv")
+map('v', "J", ":m '>+1<CR>gv=gv")
+map('v', "K", ":m '<-2<CR>gv=gv")
 
 --Check Spell
 function ToggleSpellCheck()
