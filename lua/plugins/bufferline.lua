@@ -15,6 +15,7 @@ return {
 			local map = require("helpers.keys").map
 			map("n", "<Tab>", ":BufferLineCycleNext<CR>")
 			map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
+            map('n', '<leader>q', ':bd<CR>')
         end,
 
     }
