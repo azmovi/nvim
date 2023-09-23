@@ -6,11 +6,13 @@ return {
         config = false,
         init = function()
             local map = require("helpers.keys").map
-            map('i', '<A-d>', ':lua vim.lsp.buf.hover()<CR>')
+            map('i', '<A-d>', '<ESC>:lua vim.lsp.buf.hover()<CR>')
             map('n', '<A-d>', ':lua vim.lsp.buf.hover()<CR>')
+            map('n', '<A-l>', vim.diagnostic.open_float)
             vim.g.lsp_zero_extend_cmp = 0
             vim.g.lsp_zero_extend_lspconfig = 0
         end,
+
     },
     {
         'williamboman/mason.nvim',
