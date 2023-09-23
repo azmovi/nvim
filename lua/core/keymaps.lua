@@ -13,6 +13,7 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>')
 -- Basics
 map('i', 'jk', '<ESC>')
 map('n', '<leader>y', 'gg0vG"+y')
+map('n', '<A-y>', '"+y')
 map("n", "<leader>r", "<cmd>nohl<cr>", "Clear highlights")
 
 -- Stay in visual mode
