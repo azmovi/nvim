@@ -17,7 +17,7 @@ local opts = {
 	fileencoding = "utf-8",
 	termguicolors = true,
 	title = true,
-    clipboard = unnamedplus,
+    clipboard = true,
 
 	number = true,
 	relativenumber = true,
