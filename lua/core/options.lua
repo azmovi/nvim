@@ -17,7 +17,7 @@ local opts = {
 	fileencoding = "utf-8",
 	termguicolors = true,
 	title = true,
-    clipboard = true,
+	clipboard = true,
 
 	number = true,
 	relativenumber = true,
@@ -25,9 +25,11 @@ local opts = {
 	hidden = true,
 	mouse = "a",
 	colorcolumn = "80",
+	signcolumn = 'yes',
 
 	spelllang = "pt",
 }
+
 
 -- Set options from table
 for opt, val in pairs(opts) do
