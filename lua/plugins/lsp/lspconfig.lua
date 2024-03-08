@@ -1,8 +1,14 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = {"hrsh7th/cmp-nvim-lsp",},
+
   config = function()
     local lspconfig = require("lspconfig")
+    local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+    local capabilities = cmp_nvim_lsp.default_capabilities()
+
     local keymap = vim.keymap
 
     local opts = { noremap = true, silent = true }
@@ -24,15 +30,16 @@ return {
       }
     )
 
-
     end
 
     lspconfig["pylsp"].setup({
       on_attach = on_attach,
+      capabilities = capabilities,
     })
 
     lspconfig["lua_ls"].setup({
       on_attach = on_attach,
+      capabilities = capabilities,
       settings = {
         Lua = {
           diagnostics = {
