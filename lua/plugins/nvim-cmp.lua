@@ -19,10 +19,15 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
+
+      window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+      },
+
       mapping = cmp.mapping.preset.insert({
-        ["<C-K>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-X>"] = cmp.mapping.abort(), -- close completion window
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<CR>"] = cmp.mapping.confirm({ select = true}),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
@@ -31,9 +36,11 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
+
+      preselect = 'item',
       completion = {
         autocomplete = false,
-        completeopt = "menu,menuone,preview,noselect",
+        completeopt = "menu, menuone, popup",
       },
     })
   end,
