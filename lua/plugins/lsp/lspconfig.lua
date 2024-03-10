@@ -34,7 +34,7 @@ return {
                 pylsp = {
                     plugins = {
                         pycodestyle = {
-                            ignore = {'E501'}
+                            ignore = {'E501', 'W503'}
                         },
                     pylint = { enabled = true,
                             executable = "pylint",
