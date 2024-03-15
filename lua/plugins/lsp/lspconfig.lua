@@ -5,7 +5,7 @@ return {
 
     config = function()
         local lspconfig = require("lspconfig")
-        local cmp_nvim_lsp = require("cmp_nvim_lsp")
+            local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
@@ -28,14 +28,12 @@ return {
             )
 
         end
-        lspconfig.pylsp.setup {
+        lspconfig.pyright.setup {
             on_attach = on_attach,
             settings = {
                 pylsp = {
                     plugins = {
-                        pycodestyle = {
-                            ignore = {'E501', 'W503'}
-                        },
+                        pycodestyle = {},
                     pylint = { enabled = true,
                             executable = "pylint",
                             pythonPath = ".env/bin/python",
