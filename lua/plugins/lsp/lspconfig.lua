@@ -29,6 +29,11 @@ return {
 
         end
 
+        lspconfig["jdtls"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
         lspconfig["marksman"].setup({
             on_attach = on_attach,
             capabilities = capabilities,

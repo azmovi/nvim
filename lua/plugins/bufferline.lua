@@ -1,4 +1,3 @@
--- Veja os buffers atuais no topo do editor
 return {
     {
         "akinsho/bufferline.nvim",

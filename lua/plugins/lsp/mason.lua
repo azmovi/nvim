@@ -14,6 +14,7 @@ return {
         "lua_ls",
         "pyright",
         "marksman",
+        "jdtls",
       },
     })
   end,
