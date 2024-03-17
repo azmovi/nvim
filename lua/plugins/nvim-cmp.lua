@@ -26,8 +26,22 @@ return {
       },
 
       mapping = cmp.mapping.preset.insert({
-        ["<C-X>"] = cmp.mapping.abort(), -- close completion window
-        ["<CR>"] = cmp.mapping.confirm({ select = true}),
+          ["<C-X>"] = cmp.mapping.abort(), -- close completion window
+          ['<C-p>'] = cmp.mapping(function()
+              if cmp.visible() then
+                  cmp.select_prev_item({ behavior = 'insert' })
+              else
+                  cmp.complete()
+              end
+          end),
+          ['<C-n>'] = cmp.mapping(function()
+              if cmp.visible() then
+                  cmp.select_next_item({ behavior = 'insert' })
+              else
+                  cmp.complete()
+              end
+          end),
+          ["<CR>"] = cmp.mapping.confirm({ select = true}),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
