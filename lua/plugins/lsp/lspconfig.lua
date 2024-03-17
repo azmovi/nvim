@@ -28,7 +28,13 @@ return {
             )
 
         end
-        lspconfig.pyright.setup {
+
+        lspconfig["marksman"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+        lspconfig.pyright.setup({
             on_attach = on_attach,
             settings = {
                 pylsp = {
@@ -47,7 +53,7 @@ return {
             flags = {
                 debounce_text_changes = 200,
             },
-        }
+        })
 
     lspconfig["lua_ls"].setup({
         on_attach = on_attach,
