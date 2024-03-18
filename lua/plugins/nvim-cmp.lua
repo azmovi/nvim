@@ -9,7 +9,6 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
 
     local default_cmp_sources ={
@@ -18,8 +17,7 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }
-
-      local mappings = {
+    local mappings = {
             ['<CR>'] = cmp.mapping.confirm({ select = false }),
             ['<C-x>'] = cmp.mapping.abort(),
             ['<C-p>'] = cmp.mapping(function()
@@ -37,15 +35,20 @@ return {
                 end
             end),
         }
-                local opts = {
+    local opts = {
+            preselect = 'item',
+
             completion = {
+                autocomple = false,
                 completeopt = 'menu,menuone',
             },
+
             snippet = {
                 expand = function(args)
-                    require('luasnip').lsp_expand(args.body)
+                    luasnip.lsp_expand(args.body)
                 end,
             },
+
             window = {
                 completion = {
                     scrollbar = false,
@@ -55,6 +58,7 @@ return {
                     border = "rounded",
                 },
             },
+
             sources = default_cmp_sources,
             mapping = mappings,
         }
