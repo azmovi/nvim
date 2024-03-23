@@ -1,4 +1,4 @@
-return {
+    return {
   "williamboman/mason.nvim",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
@@ -16,6 +16,7 @@ return {
         "marksman",
         "jdtls",
         "html",
+        "cssls",
       },
     })
   end,
