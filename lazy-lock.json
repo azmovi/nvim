@@ -12,6 +12,7 @@
   "git-conflict.nvim": { "branch": "main", "commit": "2957f747e1a34f1854e4e0efbfbfa59a1db04af5" },
   "gitsigns.nvim": { "branch": "main", "commit": "078041e9d060a386b0c9d3a8c7a7b019a35d3fb0" },
   "lazy.nvim": { "branch": "main", "commit": "af6afefbb46ab29a8a1db69536b04290a9403876" },
+  "live-server.nvim": { "branch": "main", "commit": "0b4d31c665fa69b3e68d6da5765fab5ccf88b0c0" },
   "lualine.nvim": { "branch": "master", "commit": "b5e8bb642138f787a2c1c5aedc2a78cb2cebbd67" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "9dfcf2036c223920826140f0151d929a43f9eceb" },

@@ -34,6 +34,7 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<leader>d', ':lua ToggleSpellCheck()<CR>')
 map('n', '<leader>w', 'z=')
 map('i', '<leader>w', '<ESC> z=')
+
 function ToggleSpellCheck()
     if vim.wo.spell then
         vim.wo.spell = false
@@ -44,3 +45,14 @@ function ToggleSpellCheck()
     end
 end
 
+map("n", "<leader>h", ":lua LiveServerToggle()<CR>")
+local running = false
+function LiveServerToggle()
+    if running then
+        running = false
+        vim.cmd('LiveServerStop')
+    else
+        running = true
+        vim.cmd('LiveServerStart')
+    end
+end
