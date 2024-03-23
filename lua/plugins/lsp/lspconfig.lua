@@ -29,6 +29,12 @@ return {
 
         end
 
+        lspconfig["html"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+
         lspconfig["jdtls"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
@@ -39,25 +45,9 @@ return {
             capabilities = capabilities,
         })
 
-        lspconfig.pyright.setup({
+        lspconfig["pyright"].setup({
             on_attach = on_attach,
-            settings = {
-                pylsp = {
-                    plugins = {
-                        pycodestyle = {},
-                    pylint = { enabled = true,
-                            executable = "pylint",
-                            pythonPath = ".env/bin/python",
-                            pylintPath = ".env/bin/pylint",
-                            ignore = {"E0401"}
-                        },
-                    }
-                }
-            },
             capabilities = capabilities,
-            flags = {
-                debounce_text_changes = 200,
-            },
         })
 
     lspconfig["lua_ls"].setup({

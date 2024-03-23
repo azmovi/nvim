@@ -9,60 +9,59 @@ return {
   },
   config = function()
     local cmp = require("cmp")
+
     local luasnip = require("luasnip")
 
-    local default_cmp_sources ={
+    local from_vscode = require("luasnip.loaders.from_vscode")
+
+    from_vscode.lazy_load()
+
+    cmp.setup({
+      snippet = { -- configure how nvim-cmp interacts with snippet engine
+        expand = function(args)
+          luasnip.lsp_expand(args.body)
+        end,
+      },
+
+      window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+      },
+
+      mapping = cmp.mapping.preset.insert({
+          ["<C-X>"] = cmp.mapping.abort(), -- close completion window
+          ["<CR>"] = cmp.mapping.confirm({ select = true}),
+
+          ['<C-p>'] = cmp.mapping(function()
+              if cmp.visible() then
+                  cmp.select_prev_item({ behavior = 'insert' })
+              else
+                  cmp.complete()
+              end
+          end),
+          ['<C-n>'] = cmp.mapping(function()
+              if cmp.visible() then
+                  cmp.select_next_item({ behavior = 'insert' })
+              else
+                  cmp.complete()
+              end
+          end),
+
+
+      }),
+      -- sources for autocompletion
+      sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
-      }
-    local mappings = {
-            ['<CR>'] = cmp.mapping.confirm({ select = false }),
-            ['<C-x>'] = cmp.mapping.abort(),
-            ['<C-p>'] = cmp.mapping(function()
-                if cmp.visible() then
-                    cmp.select_prev_item({ behavior = 'insert' })
-                else
-                    cmp.complete()
-                end
-            end),
-            ['<C-n>'] = cmp.mapping(function()
-                if cmp.visible() then
-                    cmp.select_next_item({ behavior = 'insert' })
-                else
-                    cmp.complete()
-                end
-            end),
-        }
-    local opts = {
-            preselect = 'item',
+      }),
 
-            completion = {
-                autocomple = false,
-                completeopt = 'menu,menuone',
-            },
-
-            snippet = {
-                expand = function(args)
-                    luasnip.lsp_expand(args.body)
-                end,
-            },
-
-            window = {
-                completion = {
-                    scrollbar = false,
-                    border = "rounded",
-                },
-                documentation = {
-                    border = "rounded",
-                },
-            },
-
-            sources = default_cmp_sources,
-            mapping = mappings,
-        }
-
-        cmp.setup(opts)
+      preselect = 'item',
+      completion = {
+        autocomplete = false,
+        completeopt = "menu, menuone, popup",
+      },
+    })
   end,
 }

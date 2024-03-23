@@ -15,6 +15,7 @@ return {
         "pyright",
         "marksman",
         "jdtls",
+        "html",
       },
     })
   end,

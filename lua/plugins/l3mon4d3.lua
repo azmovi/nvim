@@ -2,6 +2,7 @@ return {
     "L3MON4D3/LuaSnip",
     version = "2.*",
     build = "make install_jsregexp",
+    dependencies = { "rafamadriz/friendly-snippets" },
     config = function()
         local load_snipmate = require("luasnip.loaders.from_snipmate").lazy_load
 
@@ -9,8 +10,8 @@ return {
         load_snipmate({ paths = "~/.config/nvim/snippets" })
 
         -- Mapeamento para expansão de snippets
-        local map = require("helpers.keys").map
-        map("i", "A-<TAB>", "<cmd>lua require'luasnip'.expand_or_jump()<CR>")
+        --local map = require("helpers.keys").map
+        --map("i", "A-<TAB>", "<cmd>lua require'luasnip'.expand_or_jump()<CR>")
 
         --map("i", "<S-Tab>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
     end
