@@ -59,7 +59,7 @@ return {
 
       preselect = 'item',
       completion = {
-        autocomplete = false,
+        autocomplete = true,
         completeopt = "menu, menuone, popup",
       },
     })
