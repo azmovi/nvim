@@ -4,4 +4,7 @@ return
     build = 'pnpm add -g live-server',
     cmd = { 'LiveServerStart', 'LiveServerStop' },
     config = true,
+    xpto = function()
+       require('live-server').setup()
+    end
 }
