@@ -6,6 +6,7 @@ map('n', '<leader>m', ':MarkdownPreview<CR>')
 map('n', '<leader>c', ':w | !gcc % && ./a.out<CR>')
 map('n', '<leader>t', ':w | !g++ % && ./a.out < *.txt <CR>')
 map('n', '<leader>l', ':w | !pdflatex main.tex && firefox main.pdf <CR>')
+map('n', '<leader>t', ':w | !./mvnw tomcat7:redeploy <CR>')
 
 
 -- nerd tree 
