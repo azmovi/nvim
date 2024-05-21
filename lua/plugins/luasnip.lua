@@ -4,10 +4,13 @@ return {
     build = "make install_jsregexp",
     dependencies = { "rafamadriz/friendly-snippets" },
     config = function()
-        local load_snipmate = require("luasnip.loaders.from_snipmate").lazy_load
+        --local load_snipmate = require("luasnip.loaders.from_snipmate").lazy_load
+        local luasnip = require("luasnip")
+        local vscode = require('luasnip.loaders.from_vscode').lazy_load
 
+        luasnip.filetype_extend("jsp", {"html"})
         -- Carregar os snippets do SnipMate
-        load_snipmate({ paths = "~/.config/nvim/snippets" })
+        --load_snipmate({ paths = "~/.config/nvim/snippets" })
 
         -- Mapeamento para expansão de snippets
         --local map = require("helpers.keys").map
