@@ -17,6 +17,7 @@
         "jdtls",
         "html",
         "cssls",
+        "rust_analyzer",
       },
     })
   end,
