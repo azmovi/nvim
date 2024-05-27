@@ -62,6 +62,11 @@ return {
             capabilities = capabilities,
         })
 
+        lspconfig["ruff"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
         lspconfig["rust_analyzer"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
@@ -72,22 +77,27 @@ return {
             capabilities = capabilities,
         })
 
-    lspconfig["lua_ls"].setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-            Lua = {
-                diagnostics = {
-                    globals = { "vim" },
-                },
-                workspace = {
-                    library = {
-                        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                        [vim.fn.stdpath("config") .. "/lua"] = true,
+        lspconfig["eslint"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+        lspconfig["lua_ls"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    },
+                    workspace = {
+                        library = {
+                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                            [vim.fn.stdpath("config") .. "/lua"] = true,
+                        },
                     },
                 },
             },
-        },
-    })
-end,
+        })
+    end,
 }
