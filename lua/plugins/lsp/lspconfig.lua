@@ -77,7 +77,7 @@ return {
             capabilities = capabilities,
         })
 
-        lspconfig["eslint"].setup({
+        lspconfig["biome"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
         })
