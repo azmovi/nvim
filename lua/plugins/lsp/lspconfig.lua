@@ -43,7 +43,7 @@ return {
         lspconfig["html"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
-            filetypes = {"html", "jsp"}
+            filetypes = {"html", "jsp", "vue"}
         })
 
 
@@ -77,7 +77,7 @@ return {
             capabilities = capabilities,
         })
 
-        lspconfig["biome"].setup({
+        lspconfig["tsserver"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
         })

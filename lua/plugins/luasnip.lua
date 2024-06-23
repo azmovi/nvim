@@ -9,6 +9,7 @@ return {
         local vscode = require('luasnip.loaders.from_vscode').lazy_load
 
         luasnip.filetype_extend("jsp", {"html"})
+        luasnip.filetype_extend("vue", {"html"})
         -- Carregar os snippets do SnipMate
         --load_snipmate({ paths = "~/.config/nvim/snippets" })
 
