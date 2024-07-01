@@ -17,6 +17,6 @@ end
 
 -- Uncomment the colorscheme to use
 -- local colorscheme = get_if_available("minimal")
-local colorscheme = get_if_available('catppuccin-mocha')
+local colorscheme = get_if_available('rose-pine')
 
 return colorscheme
