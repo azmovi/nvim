@@ -5,7 +5,7 @@ map('n', '<leader>p', ':w | !python3 %<CR>')
 map('n', '<leader>m', ':MarkdownPreview<CR>')
 map('n', '<leader>c', ':w | !gcc % && ./a.out<CR>')
 map('n', '<leader>t', ':w | !g++ % && ./a.out < *.txt <CR>')
-map('n', '<leader>l', ':w | !pdflatex main.tex && firefox main.pdf <CR>')
+-- map('n', '<leader>l', ':w | !pdflatex main.tex && firefox main.pdf <CR>')
 map('n', '<leader>t', ':w | !./mvnw tomcat7:redeploy <CR>')
 map('n', '<leader>r', ':w | !.rustc % && ./* <CR>')
 
@@ -56,5 +56,17 @@ function LiveServerToggle()
     else
         running = true
         vim.cmd('LiveServerStart')
+    end
+end
+
+map("n", "<leader>l", ":lua lspToggle()<CR>")
+local flag = false
+function lspToggle()
+    if flag then
+        flag = false
+        vim.cmd('LspStop')
+    else
+        flag = true
+        vim.cmd('LspStart')
     end
 end
