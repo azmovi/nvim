@@ -60,7 +60,7 @@ function LiveServerToggle()
 end
 
 map("n", "<leader>l", ":lua lspToggle()<CR>")
-local flag = false
+local flag = true
 function lspToggle()
     if flag then
         flag = false

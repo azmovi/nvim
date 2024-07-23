@@ -20,6 +20,7 @@ return {
             opts.buffer = bufnr
             opts.desc = "Show line diagnostics"
             keymap.set("n", "<A-l>", vim.diagnostic.open_float, opts)
+            keymap.set("n", "<leader>ç", vim.diagnostic.open_float, opts)
             keymap.set("n", 'gd', vim.lsp.buf.definition , opts)
             keymap.set("n", 'gD', vim.lsp.buf.declaration, opts)
             keymap.set("n", 'gm', vim.lsp.buf.hover, opts)
@@ -58,7 +59,7 @@ return {
             capabilities = capabilities,
         })
 
-        lspconfig["ruff"].setup({
+        lspconfig["ruff_lsp"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
         })
