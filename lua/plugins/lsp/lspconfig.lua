@@ -59,7 +59,7 @@ return {
             capabilities = capabilities,
         })
 
-        lspconfig["ruff_lsp"].setup({
+        lspconfig["pyright"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
         })

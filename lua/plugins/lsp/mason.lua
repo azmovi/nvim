@@ -12,13 +12,13 @@
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
-        "pyright",
         "marksman",
         "jdtls",
         "html",
         "cssls",
         "clangd",
         "rust_analyzer",
+        "pyright",
       },
     })
   end,
