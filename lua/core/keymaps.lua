@@ -17,6 +17,7 @@ map('i', 'jk', '<ESC>')
 map('n', '<leader>y', 'gg0vG$"+y')
 map('v', '<leader>y', '"+y')
 map("n", "<leader>x", "<cmd>nohl<cr>", "Clear highlights")
+map("n", "<C-s>", ":vsplit<CR>", "splitado")
 
 -- Stay in visual mode
 map("v", "<", "<gv")
