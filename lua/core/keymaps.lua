@@ -9,7 +9,6 @@ map('n', '<leader>t', ':w | !g++ % && ./a.out < *.txt <CR>')
 map('n', '<leader>t', ':w | !./mvnw tomcat7:redeploy <CR>')
 map('n', '<leader>r', ':w | !.rustc % && ./* <CR>')
 
-
 -- nerd tree 
 map('n', '<leader>e', ':NvimTreeToggle<CR>')
 
@@ -17,7 +16,7 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>')
 map('i', 'jk', '<ESC>')
 map('n', '<leader>y', 'gg0vG$"+y')
 map('v', '<leader>y', '"+y')
-map("n", "<leader>r", "<cmd>nohl<cr>", "Clear highlights")
+map("n", "<leader>x", "<cmd>nohl<cr>", "Clear highlights")
 
 -- Stay in visual mode
 map("v", "<", "<gv")
@@ -35,7 +34,7 @@ map('n', '<C-j>', '<C-w>j')
 --Check Spell
 map('n', '<leader>d', ':lua ToggleSpellCheck()<CR>')
 map('n', '<leader>w', 'z=')
-map('i', '<leader>w', '<ESC> z=')
+map('n', '<leader>w', '<ESC> z=')
 
 function ToggleSpellCheck()
     if vim.wo.spell then
