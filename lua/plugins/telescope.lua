@@ -11,7 +11,7 @@ return {
     require('telescope').setup{
         defaults = {
             mappings = {
-                i = {
+                n = {
                     ['<C-CR>'] = 'select_vertical',
                 },
             },
