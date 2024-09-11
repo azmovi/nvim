@@ -14,6 +14,9 @@ return {
                 n = {
                     ['<C-CR>'] = 'select_vertical',
                 },
+                i = {
+                    ['<C-CR>'] = 'select_vertical',
+                },
             },
         },
     },
